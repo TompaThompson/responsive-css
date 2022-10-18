@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
+/*****  GLOBAL  *****/
+body {
+  margin: 0;
+}
+
+/*
+#707070 gray
+#1792d2 light blue
+#143774 dark blue
+*/
+
+/*****  LAYOUT  *****/
+
+.container {
+  width: 90%;
+  max-width: 900px;
+}
+
+/*****  HEADER AND NAV  *****/
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+
+}
+header {
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8;
+  padding: 2em 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  color: #707070;
+}
+h1 {
+  font-family: Lora, serif;
+  font-size: 2.275rem;
+  color: #143774;
+  margin: 0;
+}
+.subtitle {
+  color: #1792d2;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center
+}
+
+nav li {
+  margin-left: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+  border-bottom: 2px solid #1792d2;
+}
+.current-page {
+  border-bottom: 2px solid #707070;
+}
+.current-page:hover {
+  color: #707070;
+  border-bottom: 2px solid #707070;
+}
+
+/*****  MEDIA QUERIES  *****/
+@media screen and (max-width: 675px) {
+  header {
+    text-align: center;
+  }
+  .container-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.6em;
+  }
+  .site-title {
+    border: 1px solid pink;
+  }
+  nav {
+    border: 1px solid blue;
+  }
+}
