@@ -1,103 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
-/*****  GLOBAL  *****/
-body {
-  margin: 0;
-}
-
-/*
-#707070 gray
-#1792d2 light blue
-#143774 dark blue
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
 */
 
-/*****  LAYOUT  *****/
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* =================
+Typography
+================= */
+
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: #1792d2;
+    font-size: .75rem;
+    margin: 0;
+}
+
+/* =================
+Layout
+================= */
 
 .container {
-  width: 90%;
-  max-width: 900px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-/*****  HEADER AND NAV  *****/
 .container-nav {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+}
 
-}
 header {
-  display: flex;
-  justify-content: center;
-  background: #f8f8f8;
-  padding: 2em 0;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1rem;
-  color: #707070;
+    background: #f8f8f8;
+    padding: 2em 0;
 }
-h1 {
-  font-family: Lora, serif;
-  font-size: 2.275rem;
-  color: #143774;
-  margin: 0;
+
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+    }
 }
-.subtitle {
-  color: #1792d2;
-  font-weight: 700;
-  font-size: 0.75rem;
-  margin: 0;
-}
+
+/* navigation */
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-  margin-left: 2em;
+    margin-left: 2em;
 }
 
 nav a {
-  text-decoration: none;
-  color: #707070;
-  font-weight: 700;
-  padding: 0.25em 0;
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em 0;
 }
 
 nav a:hover,
 nav a:focus {
-  color: #1792d2;
-  border-bottom: 2px solid #1792d2;
+    color: #1792d2;
 }
+
 .current-page {
-  border-bottom: 2px solid #707070;
+    border-bottom: 1px solid #707070;
 }
+
 .current-page:hover {
-  color: #707070;
-  border-bottom: 2px solid #707070;
+    color: #707070;
 }
 
-/*****  MEDIA QUERIES  *****/
-@media screen and (max-width: 675px) {
-  header {
-    text-align: center;
-  }
-  .container-nav {
-    flex-direction: column;
-    align-items: center;
-  }
+@media (max-width: 675px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin: 0.6em;
-  }
-  .site-title {
-    border: 1px solid pink;
-  }
-  nav {
-    border: 1px solid blue;
-  }
+    nav li {
+        margin: .5em 0;
+    }
 }
